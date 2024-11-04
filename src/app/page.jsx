@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { GraduationCap, ChevronDown, Waves } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { GraduationCap, ChevronDown, Waves } from "lucide-react";
 
 export default function Component() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-sky-100 to-blue-100">
@@ -68,22 +68,21 @@ export default function Component() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="relative mx-auto max-w-sm"
+              className="relative mx-auto max-w-sm z-50"
             >
-              <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-sky-400 to-blue-400 opacity-75 blur group-hover:opacity-100" />
               <Button
                 onClick={() => setIsOpen(!isOpen)}
-                className="relative w-full border-2 border-sky-100 bg-white py-6 text-lg font-medium text-sky-700 shadow-md transition-all hover:bg-sky-50"
+                className="relative w-full border-2 border-sky-100 bg-white py-6 text-lg font-medium text-sky-700 shadow-md transition-all hover:bg-sky-50 z-10 flex items-center justify-between"
               >
                 Choose Your School
-                <ChevronDown className={`ml-2 h-5 w-5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                <ChevronDown className={`ml-auto h-5 w-5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
               </Button>
 
               {isOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="absolute mt-2 w-full rounded-lg border border-sky-100 bg-white shadow-lg"
+                  className="absolute top-full mt-2 w-full rounded-lg border border-sky-100 bg-white shadow-lg z-20"
                 >
                   <a
                     href="udemy.html"
@@ -107,5 +106,5 @@ export default function Component() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
