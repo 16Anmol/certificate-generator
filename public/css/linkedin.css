@@ -8,6 +8,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
 .form-container {
   background-color: white;
   padding: 20px;
@@ -17,15 +18,18 @@ body {
   width: 100%;
   max-width: 400px;
 }
+
 .form-group {
   margin-bottom: 15px;
 }
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
   color: #374151;
 }
+
 input,
 select {
   width: 100%;
@@ -34,6 +38,7 @@ select {
   border-radius: 4px;
   font-size: 16px;
 }
+
 .certificate {
   width: 100%;
   max-width: 800px;
@@ -44,9 +49,10 @@ select {
   position: relative;
   padding: 40px;
   box-sizing: border-box;
-  border: 3px solid #21b655;
+  border: 3px solid #1d4ed8; /* Changed to blue */
   margin-top: 20px;
 }
+
 .certificate-content {
   position: relative;
   height: 100%;
@@ -57,27 +63,32 @@ select {
   text-align: center;
   padding: 20px;
 }
+
 .certificate h1 {
-  color: #21b655;
+  color: #1d4ed8; /* Changed to blue */
   font-size: 36px;
   margin-bottom: 20px;
 }
+
 .certificate h2 {
-  color: #21b655;
+  color: #1d4ed8; /* Changed to blue */
   font-size: 32px;
   margin: 20px 0;
 }
+
 .certificate h3 {
-  color: #21b655;
+  color: #1d4ed8; /* Changed to blue */
   font-size: 28px;
   margin: 20px 0;
 }
+
 .certificate p {
   color: #374151;
   font-size: 18px;
   margin: 10px 0;
   line-height: 1.5;
 }
+
 .signature-seal {
   display: flex;
   justify-content: space-between;
@@ -86,45 +97,54 @@ select {
   margin-top: 40px;
   padding: 0 40px;
 }
+
 .signature {
   text-align: center;
   width: 200px;
   position: relative;
+  padding-top: 20px; /* Space for the name above */
 }
-.signature img {
-  width: 100px;
-  height: auto;
-  margin-bottom: -1px;
+
+.organizer-name {
+  font-size: 29px;
+  color: #4b5563;
+  font-family: "Brush Script MT", cursive; /* Stylish font */
+  margin-bottom: -1px; /* Adjust position relative to "Event Organizer" */
 }
+
 .signature-text {
   font-size: 14px;
   color: #4b5563;
   margin-top: 5px;
 }
+
 .seal {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 15px;
   overflow: hidden;
   background-color: white;
 }
+
 .seal img {
-  width: 110%;
-  height: 110%;
+  width: 140%;
+  height: 140%;
   object-fit: cover;
   object-position: center;
 }
+
 .buttons {
   margin-top: 20px;
   display: flex;
   gap: 10px;
 }
+
 button {
   padding: 10px 24px;
   font-size: 16px;
@@ -134,15 +154,38 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+.download-png-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50; /* Green background */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 .print-btn {
-  background-color: #21b655;
+  background-color: #1d4ed8; /* Blue background */
 }
+
 .print-btn:hover {
-  background-color: #4c1d95;
+  background-color: #1e40af; /* Darker blue when hovered */
 }
+
 .download-btn {
   background-color: #2563eb;
 }
+
 .download-btn:hover {
   background-color: #1d4ed8;
+}
+
+.download-png-btn:hover {
+  background-color: #45a049; /* Darker green when hovered */
+}
+
+.download-png-btn:focus {
+  outline: none; /* Remove outline when clicked */
 }

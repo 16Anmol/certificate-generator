@@ -90,11 +90,14 @@ select {
   text-align: center;
   width: 200px;
   position: relative;
+  padding-top: 20px; /* Space for the name above */
 }
-.signature img {
-  width: 100px;
-  height: auto;
-  margin-bottom: -1px;
+
+.organizer-name {
+  font-size: 29px;
+  color: #4b5563;
+  font-family: "Brush Script MT", cursive; /* Stylish font */
+  margin-bottom: -1px; /* Adjust position relative to "Event Organizer" */
 }
 .signature-text {
   font-size: 14px;
@@ -102,21 +105,21 @@ select {
   margin-top: 5px;
 }
 .seal {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 15px;
   overflow: hidden;
   background-color: white;
 }
 .seal img {
-  width: 110%;
-  height: 110%;
+  width: 140%;
+  height: 140%;
   object-fit: cover;
   object-position: center;
 }
@@ -134,6 +137,16 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+.download-png-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50; /* Green background */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 .print-btn {
   background-color: #5b21b6;
 }
@@ -145,4 +158,11 @@ button {
 }
 .download-btn:hover {
   background-color: #1d4ed8;
+}
+.download-png-btn:hover {
+  background-color: #45a049; /* Darker green when hovered */
+}
+
+.download-png-btn:focus {
+  outline: none; /* Remove outline when clicked */
 }
